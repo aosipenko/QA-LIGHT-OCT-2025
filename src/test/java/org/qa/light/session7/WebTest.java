@@ -28,4 +28,19 @@ public class WebTest {
         searchInput.sendKeys(Keys.ENTER);
         driver.quit();
     }
+
+    @Test
+    public void testSwitchStatement() {
+        String s = "b";
+        switch (s) {
+            case "a":
+                System.out.println("this is a!");
+            case "b":
+                System.out.println("this is b!");
+            case "c":
+                System.out.println("this is c!");
+            default:
+                System.out.println("this is default!");
+        }
+    }
 }

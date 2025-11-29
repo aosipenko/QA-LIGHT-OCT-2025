@@ -14,7 +14,7 @@ public class WebDriverFactory {
     public WebDriver getDriver() {
         EnvType envType = EnvType.valueOf(
                 System.getProperty("env.type", "LOCAL_DEFAULT"));
-        System.out.println("envType is : " + envType);
+
         switch (envType) {
             case LOCAL_DEFAULT:
                 return new ChromeDriver();
@@ -23,7 +23,7 @@ public class WebDriverFactory {
                         new URL("http://localhost:4444/"),
                         new ChromeOptions());
             case JENKINS_CHROME:
-                new RemoteWebDriver(
+                return new RemoteWebDriver(
                         new URL("http://selenium-hub:4444/"),
                         new ChromeOptions());
             default:
