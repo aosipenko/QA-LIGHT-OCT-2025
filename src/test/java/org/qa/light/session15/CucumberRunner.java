@@ -11,7 +11,6 @@ import org.qa.light.session8.CloudFlarePage;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import java.net.MalformedURLException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -35,7 +34,13 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     private WebDriver driver;
 
     @BeforeSuite
-    public void beforeSuite() throws SQLException, MalformedURLException {
+    public void beforeSuite() {
+        System.out.println("JENKINS PROPERTIES: ");
+        System.getProperties().forEach((k, v) ->
+                System.out.println(k + ": " + v));
+        System.out.println("JENKINS ENVIRONMENT: ");
+        System.getenv().forEach((k, v) -> System.out.println(k + ": " + v));
+
         driver = driverFactory.getDriver();
         WebSteps.driver = driver;
         WebSteps.generalPageObject = new GeneralPageObject(driver);
