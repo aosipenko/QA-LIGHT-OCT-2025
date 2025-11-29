@@ -22,7 +22,6 @@ import java.sql.SQLException;
 //TODO: homework for session 11 in cucumber
 
 @CucumberOptions(
-        tags = "@wip",
         glue = "org.qa.light.session14.steps",
         features = "src/test/resources/features/demo",
         plugin = {
