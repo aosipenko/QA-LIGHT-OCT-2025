@@ -35,11 +35,11 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("JENKINS PROPERTIES: ");
-        System.getProperties().forEach((k, v) ->
-                System.out.println(k + ": " + v));
-        System.out.println("JENKINS ENVIRONMENT: ");
-        System.getenv().forEach((k, v) -> System.out.println(k + ": " + v));
+//        System.out.println("JENKINS PROPERTIES: ");
+//        System.getProperties().forEach((k, v) ->
+//                System.out.println(k + ": " + v));
+//        System.out.println("JENKINS ENVIRONMENT: ");
+//        System.getenv().forEach((k, v) -> System.out.println(k + ": " + v));
 
         driver = driverFactory.getDriver();
         WebSteps.driver = driver;

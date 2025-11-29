@@ -14,7 +14,7 @@ public class WebDriverFactory {
     public WebDriver getDriver() {
         EnvType envType = EnvType.valueOf(
                 System.getProperty("env.type", "LOCAL_DEFAULT"));
-
+        System.out.println("envType is : " + envType);
         switch (envType) {
             case LOCAL_DEFAULT:
                 return new ChromeDriver();
