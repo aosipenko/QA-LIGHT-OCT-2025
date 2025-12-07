@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite1" verbose="1">
     <listeners>
-        <listener class-name="org.qa.light.session16.listener.TestExecutionListener"/>
+        <listener class-name="org.qa.light.session16.listener.MyListener"/>
     </listeners>
     <test name="My Cucumber Test">
         <classes>
