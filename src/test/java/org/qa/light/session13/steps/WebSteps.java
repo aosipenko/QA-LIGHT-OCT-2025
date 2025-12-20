@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.qa.light.session13.steps.elements.GeneralPageObject;
 import org.qa.light.session13.steps.elements.GooglePageElements;
+import org.qa.light.session20.TestComponent;
 import org.qa.light.session8.CloudFlarePage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

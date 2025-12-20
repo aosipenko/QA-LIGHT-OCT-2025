@@ -5,3 +5,7 @@ Feature: test my api + db setup
     Given I request 3 random people from API
     When I store those people in DB
     Then Then DB has 3 more entries
+
+    @wip
+    Scenario: SPring data search with example
+      Given I search for first name "Carmen" last name "Caballero"
