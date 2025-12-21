@@ -6,6 +6,5 @@ Feature: test my api + db setup
     When I store those people in DB
     Then Then DB has 3 more entries
 
-    @wip
-    Scenario: SPring data search with example
-      Given I search for first name "Carmen" last name "Caballero"
+  Scenario: Spring data search with example
+    Given I search for first name "Carmen" last name "Caballero"
