@@ -49,3 +49,8 @@ Feature: parallel tests execution
   Scenario: Tests parallel value management
     Given I set value to "L"
     Then I print value
+
+  @wip
+  Scenario: Tests parallel value management
+    Given I set value to "F"
+    Then I print value
