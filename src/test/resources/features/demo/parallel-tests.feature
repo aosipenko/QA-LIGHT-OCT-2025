@@ -42,10 +42,10 @@ Feature: parallel tests execution
 
   @wip
   Scenario: Tests parallel value management
-    Given I set value to "I"
+    Given I set value to "T"
     Then I print value
 
   @wip
   Scenario: Tests parallel value management
-    Given I set value to "H"
+    Given I set value to "L"
     Then I print value
