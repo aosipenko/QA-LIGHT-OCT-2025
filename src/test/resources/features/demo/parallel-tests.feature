@@ -47,5 +47,5 @@ Feature: parallel tests execution
 
   @wip
   Scenario: Tests parallel value management
-    Given I set value to "J"
+    Given I set value to "H"
     Then I print value
