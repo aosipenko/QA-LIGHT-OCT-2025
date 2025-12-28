@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Random;
 
 public class WebSteps {
+    private final static int ACCEPT_COOKIES_BTN_INDEX = 5;
+
     public static CloudFlarePage cloudFlarePage;
     public static GeneralPageObject generalPageObject;
 
@@ -36,7 +38,7 @@ public class WebSteps {
         if (!cookieLink.isEmpty()) {
             WebDriverFactory.getDriver()
                     .findElements(GooglePageElements.ACCEPT_COOKIES.getLocator())
-                    .get(5).click();
+                    .get(ACCEPT_COOKIES_BTN_INDEX).click();
         }
     }
 

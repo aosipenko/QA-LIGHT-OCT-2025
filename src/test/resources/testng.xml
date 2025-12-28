@@ -5,7 +5,7 @@
     </listeners>
     <test name="My Cucumber Test">
         <classes>
-            <class name="org.qa.light.session15.CucumberRunner"/>
+            <class name="org.qa.light.session16.CucumberRunner"/>
         </classes>
     </test>
 </suite>

@@ -2,6 +2,8 @@ package org.qa.light.session16;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.qa.light.session15.DBConnectionFactory;
 import org.qa.light.session15.WebDriverFactory;
@@ -26,7 +28,7 @@ import java.sql.SQLException;
 @CucumberOptions(
         tags = "@wip",
         glue = "org.qa.light.session16.steps",
-        features = "src/test/resources/features/demo",
+        features = "src/test/resources/features",
         plugin = {
                 "pretty",
                 "html:target/report.html",
@@ -37,6 +39,7 @@ import java.sql.SQLException;
 )
 @Listeners(MyListener.class)
 public class CucumberRunner extends AbstractTestNGCucumberTests {
+    private final static Logger LOG = LogManager.getLogger("CucumberRunner");
     private final static WebDriverFactory driverFactory = new WebDriverFactory();
     private final static DBConnectionFactory connectionFactory = new DBConnectionFactory();
 
@@ -45,6 +48,10 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @BeforeSuite
     public void beforeSuite() {
+        LOG.debug("DEBUG Before Suite");
+        LOG.info("INFO Before Suite");
+        LOG.warn("WARN Before Suite");
+        LOG.error("ERR Before Suite");
         driver = driverFactory.getDriver();
         WebSteps.generalPageObject = new GeneralPageObject(driver);
         WebSteps.cloudFlarePage = new CloudFlarePage(driver);
